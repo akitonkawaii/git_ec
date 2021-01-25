@@ -1,0 +1,23 @@
+<tr>
+  <td><%= order.id %></td>
+  <td><%= order.name %></td>
+  <td><%= order.address %></td>
+  <td><%= order.email %></td>
+  <td><%= order.tel_number %></td>
+  <td><%= order.pay_type %></td>
+  <% item_num = @items.where(order_id: order.id) %>
+  <td>
+    <% item_num.each do |item| %>
+      <p><%= @products.find_by(id: item.product_id).name %></p>
+    <% end %>
+  </td>
+  <td>
+    <% item_num.each do |item| %>
+      <p><%= item.quantity %></p>
+    <% end %>
+  </td>
+  <% if @flag == 'index' %>
+      <td><%= button_to '完了', order_path(order.id), method: :patch %></td>
+  <% end %>
+  
+</tr>

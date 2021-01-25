@@ -1,0 +1,5 @@
+  <%= form_tag("/products/#{@product.id}", method: :patch) do %>
+    <p><h3>編集する</h3></p>
+    <%= render partial: "product" , locals: { product: @product } %>
+    <p><input type="submit" value="編集"></p>
+  <% end %>

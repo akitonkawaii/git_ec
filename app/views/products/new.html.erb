@@ -1,0 +1,5 @@
+  <%= form_tag('/products', method: :post) do %>
+    <p><h3>登録する</h3></p>
+    <%= render partial: "product" , locals: { product: nil } %>
+    <p><input type="submit" value="登録"></p>
+  <% end %>

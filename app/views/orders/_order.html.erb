@@ -1,0 +1,8 @@
+<%= form_for @order do |f| %>
+  <p></p><%= f.text_field :name, placeholder: '氏名' %></p> 
+  <p><%= f.text_area :address, placeholder: '住所' %></p>
+  <p><%= f.email_field :email, placeholder: 'メールアドレス' %></p>
+  <p><%= f.telephone_field :tel_number, placeholder: '電話番号' %></p>
+  <p><%= f.select(:pay_type, [['選択してください', ''],['現金', '現金'],['クレジットカード', 'クレジットカード']]) %></p>
+  <p><%= f.submit '注文を確定する' %></p>
+<% end %>

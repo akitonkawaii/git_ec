@@ -1,0 +1,21 @@
+<table border="1" style="border-collapse: collapse">
+  <tr>
+    <th>商品名</th>
+    <th>値段</th>
+    <th>数量</th>
+    <th>削除</th>
+  </tr>
+  <% @subtotal = 0 %>
+  <% if @items %>
+    <% @items.each do |item| %>
+        <%= render partial: "cart", locals: {item: item} %>
+    <% end %>
+  <% end %>
+</table>
+  
+<p>小計：<%= @subtotal %></p>
+  
+<%= button_to '注文をする', new_order_path, method: :get %>
+
+<br>
+カートID <%= session[:cart_id] %>

@@ -1,0 +1,7 @@
+<tr>
+  <td><%= @products.find_by(id: item.product_id).name %></td> <%# 要修正 %>
+  <td><%= price = @products.find_by(id: item.product_id).price %></td> <%# 要修正 %>
+  <td><%= quantity = item.quantity %></td>
+  <td><%= button_to '削除', "/carts/#{item.product_id}", method: :delete %></td>
+  <% @subtotal += price * quantity %>
+</tr>

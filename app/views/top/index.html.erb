@@ -1,0 +1,15 @@
+<br>
+<% if @products %>
+  <% @products.each do |product| %>
+    <p><%= link_to product.name, product.url, method: :get %></p>
+  <% end %>
+<% end %>
+<br>
+ <h3><%= link_to 'カートを見る', carts_path, method: :get %></h3>
+<br>
+ <h3><%= link_to 'オーダーされた商品を見る', orders_path, method: :get %></h3>
+ <h3><%= link_to '完了済みオーダーを見る', done_orders_path, method: :get %></h3>
+<br> 
+ <h3><%= link_to 'データベースに商品を追加する', new_product_path, method: :get %></h3>
+<br>
+<%= javascript_pack_tag 'hello_vue' %>

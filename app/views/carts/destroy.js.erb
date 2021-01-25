@@ -1,0 +1,5 @@
+$("#ggg").html("
+  <% @items.each do |item| %>
+    <%= render partial: "cart", locals: {item: item} %>
+  <% end %>
+");

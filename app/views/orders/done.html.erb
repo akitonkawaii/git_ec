@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>オーダーID</th>
+    <th>氏名</th>
+    <th>住所</th>
+    <th>メールアドレス</th>
+    <th>電話番号</th>
+    <th>支払い方法</th>
+    <th>商品</th>
+    <th>数量</th>
+    <% if @flag == 'index' %>
+      <th>完了</th>
+    <% end %>
+  </tr>
+  <% if @orders %>
+    <% @orders.each do |order| %>
+      <%= render partial: 'order_index', locals: {order: order} %>
+    <% end %>
+  <% end %>  
+</table>
+

@@ -1,0 +1,11 @@
+<p>商品名：<%= @product.name %></p>
+<p>商品説明：<%= @product.description %></p>
+<p>値段：<%= @product.price %></p>
+<p><%= flash[:notice] %></p>
+<p><%= button_to 'カートに入れる', "/carts/#{@product.id}", method: :post %></p>
+<img src=<%= @product.image %> >
+<br>
+<br>
+<br>
+<p><%= button_to '商品情報を編集', "/products/#{@product.id}/edit", method: :get %></p>
+<p><%= button_to 'データベースから削除', "/products/#{@product.id}", method: :delete %></p>
