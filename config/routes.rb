@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'top#index' #ルートパスの表示
+  root 'contents#index' #ルートパスの表示
   
   resources :products, except: [:show]
   

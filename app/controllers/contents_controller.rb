@@ -1,7 +1,5 @@
-class TopController < ApplicationController
-  
+class ContentsController < ApplicationController
   def index
     @products = Product.all
   end
-  
 end
