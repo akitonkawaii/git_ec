@@ -7,7 +7,11 @@
 
 import Vue from 'vue'
 import App from '../app.vue'
-
+// buefy追記ここから
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+Vue.use(Buefy)
+// buefy追記ここまで
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     render: h => h(App)

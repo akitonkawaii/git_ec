@@ -8,7 +8,7 @@
 <br>
 <br>
   
-<p><%= button_to '商品情報を編集', "/products/#{@product.id}/edit", method: :get %></p>
+<p><%= button_to '商品情報を編集', "/products/#{@product.id}/edit", class:"button is-danger", method: :get %></p>
   
 
 <p><%= button_to 'データベースから削除', "/products/#{@product.id}", method: :delete %></p>
