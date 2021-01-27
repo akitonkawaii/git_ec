@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    単一コンポーネント
+    <b-button>Button</b-button>
+    <b-button type="is-success">Success</b-button>
   </div>
+
 </template>
 
 <script>

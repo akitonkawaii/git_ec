@@ -14,8 +14,9 @@
 </table>
   
 <p>小計：<%= @subtotal %></p>
-  
+
 <%= button_to '注文をする', new_order_path, method: :get %>
 
 <br>
+
 カートID <%= session[:cart_id] %>
