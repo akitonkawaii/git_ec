@@ -1,5 +1,6 @@
 import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+import TurbolinksAdapter from 'vue-turbolinks'
+Vue.use(TurbolinksAdapter)
 
 // bootstrap-vue追記ここから
 import BootstrapVue from 'bootstrap-vue'
@@ -20,39 +21,11 @@ Vue.use(BootstrapVue)
 //Vue.use(Vuetify)
 // vuetify追記ここまで
 
-
- document.addEventListener('DOMContentLoaded', () => {
-   const app = new Vue({
-     el: '#hello',
-     data: {
-       message: "データバインディング"
-     },
-     components: { App }
-   })
- })
-//
-//
-//
-// If the project is using turbolinks, install 'vue-turbolinks':
-//
-// yarn add vue-turbolinks
-//
-// Then uncomment the code block below:
-//
-// import TurbolinksAdapter from 'vue-turbolinks'
-// import Vue from 'vue/dist/vue.esm'
-// import App from '../app.vue'
-//
-// Vue.use(TurbolinksAdapter)
-//
-// document.addEventListener('turbolinks:load', () => {
-//   const app = new Vue({
-//     el: '#hello',
-//     data: () => {
-//       return {
-//         message: "Can you say hello?"
-//       }
-//     },
-//     components: { App }
-//   })
-// })
+document.addEventListener('turbolinks:load', () => {
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: "データバインディング"
+    },
+  })
+})
