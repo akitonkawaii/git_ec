@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     end
   end
   
-  get ':url' => 'products#show' #製品ページの表示
+  get ':path' => 'products#show' #製品ページの表示
   
 end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

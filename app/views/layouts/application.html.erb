@@ -11,18 +11,29 @@
   </head>
 
   <body>
+  <page id='vuescope'>
     <header>
-      <h1><a href="/">AB-MODEL</a></h1>
+      <b-navbar toggleable="md" type="light" variant="light" class="justy-content-between">
+        <b-button v-b-toggle.sidebar-1>メニュー</b-button>
+        <b-sidebar id="sidebar-1" title="メニュー" shadow>
+          <div class="px-3 py-2">
+       
+          </div>
+        </b-sidebar>
+        
+        <h3><%= link_to 'AB-MODEL', root_path, method: :get, class:'navlink' %></h3>
+        <h3><%= link_to 'カート', carts_path, method: :get, class:'navlink' %></h3>
+      </b-navbar>
     </header>
     
-    <%= yield %>
-    
-    <%= javascript_pack_tag 'ec_vue' %>
-    
-    <footer>
+      <%= yield %>
 
+      <%= javascript_pack_tag 'ec_vue' %>
+      
+    <footer>
+      
     </footer>
-      
-      
+    
+  </page>
   </body>
 </html>

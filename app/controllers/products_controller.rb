@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def show
-    @product = Product.find_by(url: params[:url])
+    @product = Product.find_by(path: params[:path])
   end
   
   def new
@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
   
   private
   def product_params
-    params.permit(:name, :description, :price, :image, :url)
+    params.permit(:name, :description, :price, :image, :path)
   end
   
 end

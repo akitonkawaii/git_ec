@@ -9,6 +9,11 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 // bootstrap-vue追記ここまで
 
+// bootstrap-vue-icon追記ここから
+//import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+//Vue.use(BootstrapVueIcons)
+// bootstrap-vue-icon追記ここまで
+
 // buefy追記ここから
 //import Buefy from 'buefy'
 //import 'buefy/dist/buefy.css'
@@ -21,7 +26,21 @@ Vue.use(BootstrapVue)
 //Vue.use(Vuetify)
 // vuetify追記ここまで
 
+
 document.addEventListener('turbolinks:load', () => {
+  //Vueを効かせるため宣言
+  const bv = new Vue({
+    el: '#vuescope',
+    data: {
+    },
+  })
+  
+  const vuetify = new Vue({
+    el: '#vuetify',
+    data: {
+    },
+  })
+  
   const app = new Vue({
     el: '#app',
     data: {
