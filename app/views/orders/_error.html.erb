@@ -1,0 +1,10 @@
+<% if @order.errors.any? %>
+  <div id="error_explanation" class="alert alert-danger">
+    <%= @order.errors.count %>つの入力エラーがあります
+    <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>  

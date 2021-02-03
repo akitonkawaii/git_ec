@@ -29,22 +29,16 @@ Vue.use(BootstrapVue)
 
 document.addEventListener('turbolinks:load', () => {
   //Vueを効かせるため宣言
-  const bv = new Vue({
+  const vueScope = new Vue({
     el: '#vuescope',
     data: {
+      message: "データバインディングのテスト"
     },
   })
-  
-  const vuetify = new Vue({
-    el: '#vuetify',
-    data: {
-    },
-  })
-  
+
   const app = new Vue({
     el: '#app',
     data: {
-      message: "データバインディング"
     },
   })
 })

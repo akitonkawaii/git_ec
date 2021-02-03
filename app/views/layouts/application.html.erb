@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>Ec</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      [v-cloak] {
+      display:none;
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'ec_vue' %>
+    <title>Ec</title>
   </head>
 
   <body>
-  <page id='vuescope'>
+  <page id='vuescope' v-cloak>
     <header>
-      <b-navbar toggleable="md" type="light" variant="light" class="justy-content-between">
+      <b-navbar
+        toggleable="md"
+        type="light"
+        variant="light"
+        class="justy-content-between border-bottom border-primary">
         <b-button v-b-toggle.sidebar-1>メニュー</b-button>
         <b-sidebar id="sidebar-1" title="メニュー" shadow>
           <div class="px-3 py-2">
        
           </div>
         </b-sidebar>
-        
-        <h3><%= link_to 'AB-MODEL', root_path, method: :get, class:'navlink' %></h3>
-        <h3><%= link_to 'カート', carts_path, method: :get, class:'navlink' %></h3>
+
+        <h3><%= link_to image_tag("header_logo.gif"), root_path, method: :get, class:'navlink' %></h3>
+          <%= button_to 'カート', carts_path, method: :get, class:'navlink btn btn-info' %>
       </b-navbar>
     </header>
+    <div class="container">
     
       <%= yield %>
+    </div>
 
-      <%= javascript_pack_tag 'ec_vue' %>
-      
     <footer>
+      <br>
+      {{message}}
       
     </footer>
-    
   </page>
   </body>
 </html>

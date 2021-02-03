@@ -1,0 +1,4 @@
+adapter: mysql2
+encoding: utf8mb4
+database: ec_development
+username: root

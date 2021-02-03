@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      order: オーダー
+    attributes:
+      order:
+        name: 氏名
+        email: メールアドレス

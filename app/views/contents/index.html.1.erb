@@ -1,0 +1,80 @@
+
+
+
+    <b-card-group deck>
+      <% product = @product_1 %>
+      <b-card
+        title=""
+        img-src="<%= product.image %>"
+        img-alt="Image"
+        img-top
+        tag="article"
+        <%#style="max-width: 20rem;"%>
+        class="mb-2 border-0"
+      >
+      <b-card-text>
+       <%= link_to product.name, product.path, method: :get %>
+      </b-card-text>
+      <%#><b-button href="#" variant="primary">Go somewhere</b-button><%>
+      </b-card>
+      
+      <% product = @product_2 %>
+      <b-card
+        title=""
+        img-src="<%= product.image %>"
+        img-alt="Image"
+        img-top
+        tag="article"
+        <%#style="max-width: 20rem;"%>
+        class="mb-2"
+      >
+      <b-card-text>
+       <%= link_to product.name, product.path, method: :get %>
+      </b-card-text>
+      <%#><b-button href="#" variant="primary">Go somewhere</b-button><%>
+      </b-card>
+
+    </b-card-group>
+    
+        <b-card-group deck>
+          <% product = @product_3 %>
+      <b-card
+        title=""
+        img-src="<%= product.image %>"
+        img-alt="Image"
+        img-top
+        tag="article"
+        <%#style="max-width: 20rem;"%>
+        class="mb-2"
+      >
+      <b-card-text>
+       <%= link_to product.name, product.path, method: :get %>
+      </b-card-text>
+      <%#><b-button href="#" variant="primary">Go somewhere</b-button><%>
+      </b-card>
+      
+      <% product = @product_4 %>
+      <b-card
+        title=""
+        img-src="<%= product.image %>"
+        img-alt="Image"
+        img-top
+        tag="article"
+        <%#style="max-width: 20rem;"%>
+        class="mb-2"
+      >
+      <b-card-text>
+       <%= link_to product.name, product.path, method: :get %>
+      </b-card-text>
+      <%#><b-button href="#" variant="primary">Go somewhere</b-button><%>
+      </b-card>
+
+    </b-card-group>
+
+<br>
+ <%= link_to 'オーダーされた商品を見る', orders_path, method: :get %>
+ <br>
+ <%= link_to '完了済みオーダーを見る', done_orders_path, method: :get %>
+<br> 
+ <%= link_to 'データベースに商品を追加する', new_product_path, method: :get %>
+<br>
